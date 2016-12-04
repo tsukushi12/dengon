@@ -12,8 +12,8 @@
 	<% if @values.kind_of?(Array) %>
 		<% @values.each do |t| %>
 			<%= t["time"] %>
-			<%= t[@key] %>
-			
+			<%= h t[@key] %>
+			<br >
 		<% end %>
 	<% end %>
 </body>

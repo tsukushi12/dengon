@@ -11,5 +11,5 @@ end
 
 post '/new' do
 	{CConf::Key => params["value"]}.save	
-
+	redirect to('/form')
 end

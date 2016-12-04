@@ -12,7 +12,7 @@
 	<% if @values.kind_of?(Array) %>
 		<% @values.each do |t| %>
 			<%= t["time"] %>
-			<%= h t[@key] %>
+			<%= escape_html t[@key] %>
 			<br >
 		<% end %>
 	<% end %>

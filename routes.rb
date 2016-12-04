@@ -5,7 +5,8 @@ require(CConf::DBPath + "/mydb.rb")
 
 get '/form' do
 	@values = Hash.get(CConf::Key, 0)
-	render :form
+	@key = CConf::Key
+	erb :form
 end
 
 post '/new' do

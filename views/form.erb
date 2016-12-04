@@ -8,5 +8,13 @@
 		<input type="text" name="value">
 		<input type="submit" value="投稿する">
 	</form>
+
+	<% if @values.kind_of?(Array) %>
+		<% @values.each do |t| %>
+			<%= t["time"] %>
+			<%= t[@key] %>
+			
+		<% end %>
+	<% end %>
 </body>
 </html>

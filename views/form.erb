@@ -11,7 +11,7 @@
 
 	<% if @values.kind_of?(Array) %>
 		<% @values.each do |t| %>
-			<%= Time.at(t["time"].slice(0..9).to_i).strftime("%m/%d/%Y %I:%M%p") %>
+			<%= Time.at(t["time"].slice(0..9).to_i).strftime("[%Y/%m/%d %I:%M %p]") %>
 			<%= escape_html t[@key] %>
 			<br >
 		<% end %>
